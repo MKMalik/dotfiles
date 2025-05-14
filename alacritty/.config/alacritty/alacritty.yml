@@ -1,0 +1,80 @@
+# Modern Alacritty Config (With Transparency for Background Image)
+window:
+  opacity: 0.8  # Set transparency (0.0 = fully transparent, 1.0 = solid)
+  # blur: true  # Enables background blur (Only works on macOS & some compositors)
+  padding:
+    x: 0
+    y: 0
+  dynamic_padding: true
+  decorations: Full # Full window decorations
+
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: Regular
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Italic
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold Italic
+  size: 14
+
+
+cursor:
+  style: Beam
+  unfocused_hollow: true
+
+scrolling:
+  history: 10000
+  multiplier: 3  # Faster scroll speed
+
+# Enable GPU acceleration for smooth performance
+performance:
+  fast_glyphs: true
+
+# Dracula Color Scheme
+colors:
+  primary:
+    background: "0x000000"  # Black background (Transparent effect will apply)
+    foreground: "0xf8f8f2"
+  normal:
+    black: "0x000000"
+    red: "0xff5555"
+    green: "0x50fa7b"
+    yellow: "0xf1fa8c"
+    blue: "0xbd93f9"
+    magenta: "0xff79c6"
+    cyan: "0x8be9fd"
+    white: "0xbbbbbb"
+  bright:
+    black: "0x555555"
+    red: "0xff6e6e"
+    green: "0x69ff94"
+    yellow: "0xffffa5"
+    blue: "0xd6acff"
+    magenta: "0xff92df"
+    cyan: "0xa4ffff"
+    white: "0xffffff"
+
+rendering:
+  backend: OpenGL  # Options: OpenGL, Vulkan
+  use_thin_strokes: true  # Improve font rendering
+
+env:
+  TERM: xterm-256color  # Set the terminal type
+
+key_bindings:
+  - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: F11, action: ToggleFullscreen }
+
+
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - --login

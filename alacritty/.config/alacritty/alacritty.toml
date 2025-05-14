@@ -1,0 +1,88 @@
+[colors.bright]
+black = "0x555555"
+blue = "0xd6acff"
+cyan = "0xa4ffff"
+green = "0x69ff94"
+magenta = "0xff92df"
+red = "0xff6e6e"
+white = "0xffffff"
+yellow = "0xffffa5"
+
+[colors.normal]
+black = "0x000000"
+blue = "0xbd93f9"
+cyan = "0x8be9fd"
+green = "0x50fa7b"
+magenta = "0xff79c6"
+red = "0xff5555"
+white = "0xbbbbbb"
+yellow = "0xf1fa8c"
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xf8f8f2"
+
+[cursor]
+style = "Beam"
+unfocused_hollow = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+# [performance]
+# fast_glyphs = true
+
+# [rendering]
+# backend = "OpenGL"
+# use_thin_strokes = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "Full"
+dynamic_padding = true
+opacity = 0.8
+
+[window.padding]
+x = 0
+y = 0
