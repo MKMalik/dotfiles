@@ -29,7 +29,9 @@ if [ ! -f "$HOME/.config/hypr/.initial_startup_done" ]; then
 		swww query || swww-daemon && $swww $wallpaper $effect
 	    "$scriptsDir/WallustSwww.sh" > /dev/null 2>&1 & 
 	fi
-     
+    
+    # set wallpaper
+    ~/.config/hypr/scripts/hyprpaper-gen.sh --start
     # initiate GTK dark mode and apply icon and cursor theme
     gsettings set org.gnome.desktop.interface color-scheme $color_scheme > /dev/null 2>&1 &
     gsettings set org.gnome.desktop.interface gtk-theme $gtk_theme > /dev/null 2>&1 &
