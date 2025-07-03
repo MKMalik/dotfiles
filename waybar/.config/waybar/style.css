@@ -1,0 +1,103 @@
+window {
+  background-color: rgba(150, 200, 255, 0.12); /* translucent white */
+  border: none;
+  color: black;
+  /* font-family: "Fira Sans", "Font Awesome 6 Free", sans-serif; */
+  font-size: 13px;
+}
+
+/* Spacing and appearance for all modules */
+#workspaces,
+#idle_inhibitor,
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#clock,
+#tray{
+  padding: 0 10px;
+  margin: 2px 4px;
+  border-radius: 6px;
+  background-color: rgba(230, 230, 250, 0.75); /* soft blue */
+  color: #000000;}
+
+idle_inhibitor {
+  color: #ffffff;
+}
+
+#pulseaudio {
+  background-color: rgba(100, 149, 237, 0.8); /* Cornflower blue background */
+  color: #ffffff; /* White text */
+  border-radius: 6px;
+  padding: 0 10px;
+  margin: 2px 4px;
+}
+
+/* Optional: muted state for pulseaudio */
+#pulseaudio.muted {
+  background-color: rgba(200, 100, 100, 0.8);
+  color: #ffffff;
+}
+
+#clock {
+  border-radius: 6px;
+  padding: 0 10px;
+  margin: 2px 4px;
+}
+
+#cpu,
+#memory {
+  padding: 0 8px;
+  margin: 2px 4px;
+  border-radius: 6px;
+  color: black;
+}
+
+
+#battery {
+  color: black;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin: 2px 4px;
+}
+
+#battery.warning {
+  background-color: rgba(255, 165, 0, 0.3); /* Orange */
+  color: #ffffff;
+}
+
+#battery.critical {
+  background-color: rgba(255, 69, 58, 0.3); /* Red */
+  color: #ffffff;
+}
+
+/* Workspaces - active/inactive style */
+#workspaces button {
+  padding: 0 8px;
+  margin: 0 2px;
+  border-radius: 4px;
+  background: transparent;
+  color: black;
+}
+
+#workspaces button.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: lightseagreen;
+  font-weight: bold;
+}
+
+/* System tray icons */
+#tray > .tray-item {
+  margin: 0 4px;
+  background-color: blueviolet;
+}
+
+/* Tooltip text */
+tooltip {
+  background: transparent;
+  background-color: rgba(40, 40, 40, 0.9);
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 12px;
+}

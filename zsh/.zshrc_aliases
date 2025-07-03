@@ -1,0 +1,4 @@
+alias mppl-poweron="wakeonlan 00:e0:4c:0b:46:a0"
+alias cd="z"
+alias cdi="zi"
+alias reload="clear && source ~/.zshrc"

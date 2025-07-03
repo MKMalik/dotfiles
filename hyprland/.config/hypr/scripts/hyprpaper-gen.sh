@@ -6,7 +6,7 @@
 
 # Default paths
 config_file="$HOME/.config/hypr/hyprpaper.conf"
-wallpaper_dir="$HOME/Pictures/Wallpapers"
+wallpaper_dir="$HOME/Pictures/wallpapers"
 
 # Default behavior
 preload_all=false

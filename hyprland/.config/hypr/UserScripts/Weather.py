@@ -30,7 +30,8 @@ def get_location():
     return float(loc[0]), float(loc[1])
   
 # Get latitude and longitude
-latitude, longitude = get_location()
+# latitude, longitude = get_location()
+latitude, longitude = 26.080942, 83.298759
 
 # Open-Meteo API endpoint
 url = f"https://weather.com/en-PH/weather/today/l/{latitude},{longitude}"
