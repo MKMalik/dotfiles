@@ -1,25 +1,24 @@
 #!/bin/bash
 
 # Options for your power menu
-options="Shutdown\nReboot\nSuspend\nHibernate\nLogout"
+options="shutdown\nreboot\nsuspend\nhibernate\nlogout"
 
-# Use wofi (or rofi -dmenu, bemenu, etc.) to present the options
-selected_option=$(echo -e "$options" | wofi --dmenu --prompt "Power Actions:")
+selected_option=$(echo -e "$options" | rofi -dmenu -p "Power Actions")
 
 case "$selected_option" in
-    "Shutdown")
+    "shutdown")
         systemctl poweroff
         ;;
-    "Reboot")
+    "reboot")
         systemctl reboot
         ;;
-    "Suspend")
+    "suspend")
         systemctl suspend
         ;;
-    "Hibernate")
+    "hibernate")
         systemctl hibernate
         ;;
-    "Logout")
+    "logout")
         # Replace with your Wayland compositor's logout command
         # For Hyprland: hyprctl dispatch exit
         # For Sway: swaymsg exit
