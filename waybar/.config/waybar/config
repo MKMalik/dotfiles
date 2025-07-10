@@ -5,7 +5,7 @@
   "spacing": 1,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["idle_inhibitor", "cpu", "memory", "battery", "pulseaudio", "tray", "custom/power"],
+  "modules-right": ["custom/power_profile", "idle_inhibitor", "cpu", "memory", "battery", "pulseaudio", "tray", "custom/power"],
 
   "sway/mode": {
     "format": "{}"
@@ -72,5 +72,11 @@
         "hibernate": "systemctl hibernate",
         "logout": "loginctl terminate-session ${XDG_SESSION_ID}" // Example for logout
     }
+  },  
+  "custom/power_profile": {
+    "format": "{}",
+    "exec": "powerprofilesctl get | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2); print}'",
+    "interval": 10,
+    "return-type": "text"
   }
 }
