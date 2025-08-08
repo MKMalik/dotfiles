@@ -2,3 +2,19 @@ alias mppl-poweron="wakeonlan 00:e0:4c:0b:46:a0"
 alias cd="z"
 alias cdi="zi"
 alias reload="clear && source ~/.zshrc"
+alias ff="fastfetch --config arch.jsonc"
+
+j() {
+  if [ "$1" = "book" ]; then
+    shift
+    book_title="$*"
+    dir="$HOME/journals/books/$book_title"
+    mkdir -p "$dir"
+    file="$dir/$(date +%F).md"
+    nvim -c "BookJournal $file"
+  else
+    file="$HOME/journals/$(date +%F).md"
+    nvim +Journal "$file"
+  fi
+}
+
